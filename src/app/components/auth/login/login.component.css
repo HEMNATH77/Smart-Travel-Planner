@@ -1,0 +1,132 @@
+/* Full page background */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 40px 35px;
+  width: 450px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Container */
+.login-container h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+/* Travel Topic */
+.login-container::before {
+  content: "Smart Travel Itinerary Planner";
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Inputs */
+input,
+select {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Password box */
+.password-box {
+  position: relative;
+}
+
+.password-box mat-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+}
+
+/* Button */
+button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* Error */
+.error {
+  margin-top: 10px;
+  color: #dc2626;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Register link */
+.register-link {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.register-link a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

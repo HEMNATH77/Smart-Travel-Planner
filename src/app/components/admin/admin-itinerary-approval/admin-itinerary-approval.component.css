@@ -1,0 +1,128 @@
+/* 🌍 Page Wrapper */
+.admin-approval {
+  min-height: calc(100vh - 64px);
+  padding: 40px 30px;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+/* 🏷 Title */
+.admin-approval h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* 📭 Empty State */
+.empty {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  font-weight: 600;
+  color: #555;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* 🧾 Table */
+.approval-table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* Table Header */
+.approval-table thead {
+  background: #1a73e8;
+  color: white;
+}
+
+.approval-table th {
+  padding: 14px 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Table Rows */
+.approval-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.approval-table tbody tr:hover {
+  background: rgba(26, 115, 232, 0.08);
+}
+
+/* Budget Highlight */
+.approval-table td:nth-child(4) {
+  font-weight: 700;
+  color: #1b8f3c;
+}
+
+/* 🛠 Actions */
+.approval-table .actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.approval-table button {
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Approve */
+.approval-table button:first-child {
+  background: #1b8f3c;
+  color: white;
+}
+
+.approval-table button:first-child:hover {
+  background: #157a32;
+  box-shadow: 0 0 8px rgba(27, 143, 60, 0.6);
+}
+
+/* Reject */
+.approval-table button:last-child {
+  background: #e53935;
+  color: white;
+}
+
+.approval-table button:last-child:hover {
+  background: #c62828;
+  box-shadow: 0 0 8px rgba(229, 57, 53, 0.6);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .approval-table {
+    font-size: 14px;
+  }
+
+  .approval-table th,
+  .approval-table td {
+    padding: 10px;
+  }
+
+  .approval-table .actions {
+    flex-direction: column;
+  }
+}

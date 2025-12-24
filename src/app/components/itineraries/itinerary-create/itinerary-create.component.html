@@ -1,0 +1,73 @@
+<div class="itinerary-page">
+
+  <div class="itinerary-card">
+    <h2>Create New Itinerary</h2>
+    <p class="subtitle">Plan your journey step by step 🧭</p>
+
+    <form (ngSubmit)="createItinerary()" #form="ngForm" novalidate>
+
+      <!-- Destination -->
+      <label>Destination</label>
+      <input
+        type="text"
+        name="destination"
+        [(ngModel)]="itinerary.destination"
+        required
+        placeholder="Enter destination"
+      />
+
+      <!-- Start Date -->
+      <label>Start Date</label>
+      <input
+        type="date"
+        name="startDate"
+        [(ngModel)]="itinerary.startDate"
+        required
+      />
+
+      <!-- End Date -->
+      <label>End Date</label>
+      <input
+        type="date"
+        name="endDate"
+        [(ngModel)]="itinerary.endDate"
+        required
+      />
+
+      <!-- Budget -->
+      <label>Budget (₹)</label>
+      <input
+        type="number"
+        name="budget"
+        [(ngModel)]="itinerary.budget"
+        min="1"
+        required
+        placeholder="Enter budget"
+      />
+
+      <!-- Preferences -->
+      <label>Preferences</label>
+      <textarea
+        name="preferences"
+        [(ngModel)]="itinerary.preferences"
+        placeholder="Beach, Adventure, Nature..."
+      ></textarea>
+
+      <!-- ❌ Error Message -->
+      <p class="error" *ngIf="errorMsg">{{ errorMsg }}</p>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button type="submit">
+          Create Itinerary
+        </button>
+
+        <button type="button" class="cancel" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

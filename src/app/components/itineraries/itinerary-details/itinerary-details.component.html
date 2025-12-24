@@ -1,0 +1,43 @@
+<!-- ✅ DETAILS PAGE -->
+<div class="details-wrapper" *ngIf="!notFound">
+
+  <div class="details-card">
+    <h2 class="title">Itinerary Details</h2>
+
+    <div class="row">
+      <span class="label">Destination</span>
+      <span class="value link">{{ itinerary.destination }}</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Start Date</span>
+      <span class="value">{{ itinerary.startDate }}</span>
+    </div>
+
+    <div class="row">
+      <span class="label">End Date</span>
+      <span class="value">{{ itinerary.endDate }}</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Budget</span>
+      <span class="value budget">₹{{ itinerary.budget }}</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Preferences</span>
+      <span class="value">{{ itinerary.preferences }}</span>
+    </div>
+
+    <div class="actions">
+      <button class="btn back" (click)="goBack()">Back</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ❌ NOT FOUND -->
+<div *ngIf="notFound" class="not-found">
+  <h3>Itinerary not found</h3>
+  <button class="btn back" (click)="goBack()">Go Back</button>
+</div>

@@ -1,0 +1,56 @@
+<div class="login-page">
+  <div class="login-card">
+
+    <div class="login-container">
+      <h2>Welcome Back</h2>
+
+      <form (ngSubmit)="login()">
+
+        <!-- EMAIL -->
+        <label>Email</label>
+        <input
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+
+        <!-- PASSWORD -->
+        <label>Password</label>
+        <div class="password-box">
+          <input
+            [type]="hidePassword ? 'password' : 'text'"
+            [(ngModel)]="password"
+            name="password"
+            required
+          />
+          <span (click)="hidePassword = !hidePassword">
+            <mat-icon>
+              {{ hidePassword ? 'visibility_off' : 'visibility' }}
+            </mat-icon>
+          </span>
+        </div>
+
+        <!-- ROLE -->
+        <label>Login As</label>
+        <select [(ngModel)]="role" name="role" required>
+          <option value="user">Traveler / User</option>
+          <option value="admin">Admin</option>
+        </select>
+
+        <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+        <button type="submit">
+          Start Exploring
+        </button>
+
+        <p class="register-link">
+          New here?
+          <a routerLink="/register">Create an account</a>
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+</div>

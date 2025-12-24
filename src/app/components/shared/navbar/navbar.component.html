@@ -1,0 +1,55 @@
+<nav *ngIf="showNavbar" class="navbar">
+
+  <!-- Left -->
+  <div class="nav-left">
+    <a routerLink="/itineraries" class="brand">
+      Smart Travel Planner
+    </a>
+
+    <span *ngIf="isAdmin" class="admin-text">
+      Admin
+    </span>
+  </div>
+
+  <!-- Right -->
+  <ul class="nav-right" *ngIf="isLoggedIn">
+
+    <!-- User -->
+    <ng-container *ngIf="!isAdmin">
+      <li>
+        <a routerLink="/itineraries" routerLinkActive="active">
+          My Itineraries
+        </a>
+      </li>
+      <li>
+        <a routerLink="/itineraries/create" routerLinkActive="active">
+          Create Trip
+        </a>
+      </li>
+    </ng-container>
+
+    <!-- Admin -->
+    <ng-container *ngIf="isAdmin">
+      <li>
+        <a routerLink="/admin" routerLinkActive="active">
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a routerLink="/admin/approvals" routerLinkActive="active">
+          Approvals
+        </a>
+      </li>
+    </ng-container>
+
+    <li class="divider"></li>
+
+    <li>
+      <button class="logout-btn" (click)="logout()">
+        Logout
+      </button>
+    </li>
+
+  </ul>
+
+</nav>

@@ -1,0 +1,73 @@
+<div class="register-page">
+  <mat-card class="register-card">
+
+    <h2>Create Account</h2>
+    <p class="subtitle">Start planning your journey ✈️</p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+      <!-- EMAIL -->
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email">
+      </mat-form-field>
+
+      <!-- PASSWORD -->
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          [type]="hidePassword ? 'password' : 'text'"
+          formControlName="password"
+        >
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="hidePassword = !hidePassword">
+          <mat-icon>
+            {{ hidePassword ? 'visibility_off' : 'visibility' }}
+          </mat-icon>
+        </button>
+      </mat-form-field>
+
+      <!-- PHONE NUMBER -->
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Phone Number</mat-label>
+        <input matInput type="tel" formControlName="phone">
+      </mat-form-field>
+
+      <!-- ADDRESS -->
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Address</mat-label>
+        <textarea matInput rows="2" formControlName="address"></textarea>
+      </mat-form-field>
+
+      <!-- STATE -->
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>State</mat-label>
+        <input matInput type="text" formControlName="state">
+      </mat-form-field>
+
+      <!-- COUNTRY -->
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Country</mat-label>
+        <input matInput type="text" formControlName="country">
+      </mat-form-field>
+
+      <!-- ERROR / SUCCESS -->
+      <p class="error" *ngIf="errorMsg">{{ errorMsg }}</p>
+      <p class="success" *ngIf="successMsg">{{ successMsg }}</p>
+
+      <button mat-raised-button class="full">
+        Create Account
+      </button>
+
+      <p class="login-link">
+        Already have an account?
+        <a routerLink="/login">Login</a>
+      </p>
+
+    </form>
+  </mat-card>
+</div>

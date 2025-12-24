@@ -1,0 +1,41 @@
+<div class="list-wrapper">
+
+  <div class="list-card">
+    <h2>My Itineraries</h2>
+
+    <!-- Empty State -->
+    <div *ngIf="itineraries.length === 0" class="empty">
+      No itineraries available.
+    </div>
+
+    <!-- Table -->
+    <table *ngIf="itineraries.length > 0" class="itinerary-table">
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Budget</th>
+          <th>Preferences</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let itinerary of itineraries">
+          <td>{{ itinerary.destination }}</td>
+          <td>{{ itinerary.startDate }}</td>
+          <td>{{ itinerary.endDate }}</td>
+          <td class="budget">₹{{ itinerary.budget }}</td>
+          <td>{{ itinerary.preferences }}</td>
+          <td class="actions">
+            <button class="view" (click)="viewItinerary(itinerary.id)">View</button>
+            <button class="edit" (click)="editItinerary(itinerary.id)">Edit</button>
+            <button class="delete" (click)="deleteItinerary(itinerary.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

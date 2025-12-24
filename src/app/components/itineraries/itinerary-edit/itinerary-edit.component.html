@@ -1,0 +1,58 @@
+<div class="edit-wrapper">
+
+  <div class="itinerary-form">
+    <h2>Edit Itinerary</h2>
+
+    <form (ngSubmit)="updateItinerary()" #form="ngForm">
+
+      <label>Destination</label>
+      <input
+        type="text"
+        name="destination"
+        [(ngModel)]="itinerary.destination"
+        required
+      />
+
+      <label>Start Date</label>
+      <input
+        type="date"
+        name="startDate"
+        [(ngModel)]="itinerary.startDate"
+        required
+      />
+
+      <label>End Date</label>
+      <input
+        type="date"
+        name="endDate"
+        [(ngModel)]="itinerary.endDate"
+        required
+      />
+
+      <label>Budget</label>
+      <input
+        type="number"
+        name="budget"
+        [(ngModel)]="itinerary.budget"
+        required
+      />
+
+      <label>Preferences</label>
+      <textarea
+        name="preferences"
+        [(ngModel)]="itinerary.preferences"
+      ></textarea>
+
+      <div class="actions">
+        <button type="submit" [disabled]="!form.valid">
+          Update
+        </button>
+        <button type="button" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

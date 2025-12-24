@@ -1,0 +1,99 @@
+/* PAGE */
+.register-page {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CARD */
+.register-card {
+  width: 150%;
+  max-width: 750px;   /* ✅ IMPORTANT */
+  padding: 32px 28px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* TITLE */
+.register-card h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #1f2937;
+}
+
+/* SUBTITLE */
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #2563eb;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* ✅ spacing fix */
+}
+
+/* FULL WIDTH */
+.full,
+mat-form-field {
+  width: 100%;
+}
+
+/* INPUT HEIGHT FIX */
+mat-form-field input,
+mat-form-field textarea {
+  font-size: 14px;
+}
+
+/* BUTTON */
+button[mat-raised-button] {
+  margin-top: 16px;
+  height: 46px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: #fff;
+}
+
+/* ERROR / SUCCESS */
+.error {
+  text-align: center;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.success {
+  text-align: center;
+  color: #16a34a;
+  font-size: 13px;
+}
+
+/* LINK */
+.login-link {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
